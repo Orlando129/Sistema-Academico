@@ -5,12 +5,21 @@ function lancarNota(nota1, nota2){
     };
     
     if (!validarNota(nota1)) {
-        throw new Error("A nota de 1UP deve ser um número entre 0.0 e 10.0 com uma casa decimal.");
-    }
-    if (!validarNota(nota2)) {
-        throw new Error("A nota de 2UP deve ser um número entre 0.0 e 10.0 com uma casa decimal.");
-    }
-
-    return {nota1, nota2};
+        if (typeof nota1 !== 'number') {
+          throw new Error("Entradas devem ser numéricas");
+        }
+        throw new Error("Nota de 1UP inválida");
+      }
+    
+      if (!validarNota(nota2)) {
+        if (typeof nota2 !== 'number') {
+          throw new Error("Entradas devem ser numéricas");
+        }
+        throw new Error("Nota de 2UP inválida");
+      }
+    
+      // Se as notas forem válidas, retorna as notas salvas
+      return { nota1, nota2, mensagem: "Notas salvas com sucesso" };
+    
 }
 module.exports = lancarNota;

@@ -1,5 +1,3 @@
-const calcularMedia = require("./calcularMedia");
-
 function exibirStatus(media) {
     if (media < 4.0) {
         return 'Reprovado por média';

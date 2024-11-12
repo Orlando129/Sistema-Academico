@@ -1,4 +1,4 @@
-const lancarNota = require('../src/LancamentoNotas')
+const lancarNota = require('../src/LancamentoNotas');
  
 describe('Testes para a função lancarNota', () => {
   test('Nota válida de 1UP e 2UP', () => {

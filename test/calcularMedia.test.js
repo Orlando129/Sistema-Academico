@@ -1,4 +1,4 @@
-const calcularMedia = require("../src/calcularMedia")
+const calcularMedia = require("../src/calcularMedia");
 
 describe('Testes para a função calcularMedia', () => {
    test('Notas válidas de 1UP e 2UP', () => {
